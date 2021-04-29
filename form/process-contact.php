@@ -10,10 +10,14 @@
     
     require './phpMailer/PHPMailerAutoload.php';
     //$from = "ascrea@ascrea.ma";
-    $to  = "the.fire.zita@gmail.com";
+    
+   
      
     $username = "contact@domainname.com";
     $password = "password of email" ;
+
+    //hitch hatchdo hatsifto l rask so username = to
+    $to  = $username;
     //$path='../assets/programme.pdf';
 
     $mail = new PHPMailer(); 
@@ -21,7 +25,7 @@
     $mail->isSMTP();
     
     //   $mail->Host = "smtp.gmail.com"; 
-    $mail->Host = "free.mboxhosting.com";
+    $mail->Host = "mail.domain.ma/com";
     $mail->Port = 465 ; // or 587 to tls
     $mail->SMTPAuth = true;  
     $mail->SMTPSecure='SSL' ;//tls
@@ -38,7 +42,7 @@
                                                        '.' - Nom: '. $name .'<br>'
                                                        .' - Phone: '. $phone .'<br>'
                                                         .' - Email: '. $from .'<br>'   
-                                                        .' <h4 style="color:Teal" > Commentaire:</h4>'. $message .'<br>'; 
+                                                        .' <h4 style="color:Teal" > Message:</h4>'. $message .'<br>'; 
                                                              
    
 
